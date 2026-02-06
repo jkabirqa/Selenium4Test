@@ -9,7 +9,7 @@ pipeline {
         }
          stage('Testing') {
             steps {
-                checkout(git branch: 'main', changelog: false, poll: false, url: 'https://github.com/jkabirqa/Selenium4Test.git')
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/jkabirqa/Selenium4Test.git'
                 sh 'mvn clean test'
             }
         }
