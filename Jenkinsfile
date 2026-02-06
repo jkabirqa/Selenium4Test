@@ -9,7 +9,7 @@ pipeline {
         }
          stage('Testing') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/w2a/Selenium4Grid.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/jkabirqa/Selenium4Grid.git']]])
                 sh 'mvn clean test'
             }
         }
